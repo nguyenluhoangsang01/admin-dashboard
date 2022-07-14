@@ -21,8 +21,6 @@ export const ContextProvider = ({ children }) => {
     }));
   };
 
-  console.log(screenSize);
-
   return (
     <StateContext.Provider
       value={{

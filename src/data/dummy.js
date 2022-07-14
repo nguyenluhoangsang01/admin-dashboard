@@ -653,7 +653,6 @@ export const earningData = [
     title: "Customers",
     iconColor: "#03C9D7",
     iconBg: "#E5FAFB",
-    pcColor: "red-600",
   },
   {
     icon: <BsBoxSeam />,
@@ -662,7 +661,6 @@ export const earningData = [
     title: "Products",
     iconColor: "rgb(255, 244, 229)",
     iconBg: "rgb(254, 201, 15)",
-    pcColor: "green-600",
   },
   {
     icon: <FiBarChart />,
@@ -671,8 +669,6 @@ export const earningData = [
     title: "Sales",
     iconColor: "rgb(228, 106, 118)",
     iconBg: "rgb(255, 244, 229)",
-
-    pcColor: "green-600",
   },
   {
     icon: <HiOutlineRefresh />,
@@ -681,7 +677,6 @@ export const earningData = [
     title: "Refunds",
     iconColor: "rgb(0, 194, 146)",
     iconBg: "rgb(235, 250, 242)",
-    pcColor: "red-600",
   },
 ];
 
@@ -693,7 +688,6 @@ export const recentTransactions = [
     desc: "Money Added",
     iconColor: "#03C9D7",
     iconBg: "#E5FAFB",
-    pcColor: "green-600",
   },
   {
     icon: <BsShield />,
@@ -702,7 +696,6 @@ export const recentTransactions = [
     title: "Wallet",
     iconColor: "rgb(0, 194, 146)",
     iconBg: "rgb(235, 250, 242)",
-    pcColor: "red-600",
   },
   {
     icon: <FiCreditCard />,
@@ -711,8 +704,6 @@ export const recentTransactions = [
     desc: "Money reversed",
     iconColor: "rgb(255, 244, 229)",
     iconBg: "rgb(254, 201, 15)",
-
-    pcColor: "green-600",
   },
   {
     icon: <TiTick />,
@@ -722,7 +713,6 @@ export const recentTransactions = [
 
     iconColor: "rgb(228, 106, 118)",
     iconBg: "rgb(255, 244, 229)",
-    pcColor: "green-600",
   },
   {
     icon: <BsCurrencyDollar />,
@@ -732,7 +722,6 @@ export const recentTransactions = [
     desc: "Payment Sent",
     iconColor: "#03C9D7",
     iconBg: "#E5FAFB",
-    pcColor: "red-600",
   },
 ];
 
@@ -743,7 +732,6 @@ export const weeklyStats = [
     title: "Top Sales",
     desc: "Johnathan Doe",
     iconBg: "#FB9678",
-    pcColor: "red-600",
   },
   {
     icon: <FiStar />,
@@ -751,7 +739,6 @@ export const weeklyStats = [
     title: "Best Seller",
     desc: "MaterialPro Admin",
     iconBg: "rgb(254, 201, 15)",
-    pcColor: "red-600",
   },
   {
     icon: <BsChatLeft />,
@@ -759,7 +746,6 @@ export const weeklyStats = [
     title: "Most Commented",
     desc: "Ample Admin",
     iconBg: "#00C292",
-    pcColor: "green-600",
   },
 ];
 
@@ -2957,11 +2943,30 @@ export const dropdownData = [
   },
 ];
 export const SparklineAreaData = [
-  { x: 1, yval: 2 },
+  { x: 1, yval: 5 },
   { x: 2, yval: 6 },
-  { x: 3, yval: 8 },
-  { x: 4, yval: 5 },
-  { x: 5, yval: 10 },
+  { x: 3, yval: 5 },
+  { x: 4, yval: 7 },
+  { x: 5, yval: 4 },
+  { x: 6, yval: 3 },
+  { x: 7, yval: 9 },
+  { x: 8, yval: 5 },
+  { x: 9, yval: 6 },
+  { x: 10, yval: 5 },
+  { x: 11, yval: 7 },
+  { x: 12, yval: 8 },
+  { x: 13, yval: 4 },
+  { x: 14, yval: 5 },
+  { x: 15, yval: 3 },
+  { x: 16, yval: 4 },
+  { x: 17, yval: 11 },
+  { x: 18, yval: 10 },
+  { x: 19, yval: 2 },
+  { x: 20, yval: 12 },
+  { x: 21, yval: 4 },
+  { x: 22, yval: 7 },
+  { x: 23, yval: 6 },
+  { x: 24, yval: 8 },
 ];
 
 export const lineCustomSeries = [
