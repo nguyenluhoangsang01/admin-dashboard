@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "the-new-css-reset/css/reset.css";
 import "./App.css";
 import { Navbar, Sidebar } from "./components";
+import { useStateContext } from "./contexts/ContextProvider";
 import {
   Area,
   Bar,
@@ -24,7 +25,7 @@ import {
 } from "./pages";
 
 function App() {
-  const activeMenu = true;
+  const { activeMenu } = useStateContext();
 
   return (
     <BrowserRouter>
@@ -67,7 +68,7 @@ function App() {
           </div>
         </div>
 
-        {/* Main Content */}
+        {/* Pages */}
         <div>
           <Routes>
             {/* Dashboard */}
