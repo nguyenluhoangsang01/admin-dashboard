@@ -920,7 +920,6 @@ export const ordersGrid = [
     width: "120",
     textAlign: "Center",
   },
-
   {
     field: "Location",
     headerText: "Location",
@@ -2024,7 +2023,6 @@ export const ordersData = [
   {
     OrderID: 10248,
     CustomerName: "Vinet",
-
     TotalAmount: 32.38,
     OrderItems: "Fresh Tomato",
     Location: "USA",
