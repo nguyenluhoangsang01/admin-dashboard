@@ -1,18 +1,18 @@
+import React from "react";
 import {
-  Agenda,
-  Day,
-  DragAndDrop,
-  Inject,
-  Month,
-  Resize,
   ScheduleComponent,
+  Day,
   Week,
   WorkWeek,
+  Month,
+  Agenda,
+  Resize,
+  DragAndDrop,
+  Inject,
 } from "@syncfusion/ej2-react-schedule";
-import React from "react";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
 import { scheduleData } from "../data/dummy";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 const Calendar = () => {
   return (
