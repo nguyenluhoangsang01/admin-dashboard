@@ -1,14 +1,10 @@
 import React from "react";
-import { BsCheckLg, BsCurrencyDollar } from "react-icons/bs";
 import { GoPrimitiveDot } from "react-icons/go";
 import Button from "../components/Button";
 import SparkLine from "../components/Charts/SparkLine";
 import Stacked from "../components/Charts/Stacked";
-import {
-  earningData,
-  SparklineAreaData,
-  ecomPieChartData,
-} from "../data/dummy";
+import Footer from "../components/Footer";
+import { earningData, SparklineAreaData } from "../data/dummy";
 
 const Ecommerce = () => {
   return (
@@ -141,6 +137,8 @@ const Ecommerce = () => {
           </div>
         </div>
       </div>
+
+      <Footer />
     </div>
   );
 };
