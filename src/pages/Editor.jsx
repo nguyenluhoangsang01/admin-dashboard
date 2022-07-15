@@ -8,14 +8,14 @@ import {
   Toolbar,
 } from "@syncfusion/ej2-react-richtexteditor";
 import React from "react";
-import { EditorData } from "../data/dummy";
+// import { EditorData } from "../data/dummy";
 import HeaderFooterPage from "../layout/pages";
 
 const Editor = () => {
   return (
     <HeaderFooterPage category="app" title="editor">
       <RichTextEditorComponent>
-        <EditorData />
+        {/* <EditorData /> */}
         <Inject services={[Toolbar, Link, Image, HtmlEditor, QuickToolbar]} />
       </RichTextEditorComponent>
     </HeaderFooterPage>

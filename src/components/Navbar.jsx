@@ -31,8 +31,14 @@ const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
 );
 
 const Navbar = () => {
-  const { setActiveMenu, isClicked, handleClick, screenSize, setScreenSize } =
-    useStateContext();
+  const {
+    setActiveMenu,
+    isClicked,
+    handleClick,
+    screenSize,
+    setScreenSize,
+    theme,
+  } = useStateContext();
 
   useEffect(() => {
     const handleResize = () => setScreenSize(window.innerWidth);
@@ -57,7 +63,7 @@ const Navbar = () => {
       <NavButton
         title="Menu"
         customFunc={() => setActiveMenu((prevActiveMenu) => !prevActiveMenu)}
-        color="blue"
+        color={theme.currentColor}
         icon={<AiOutlineMenu />}
       />
 
@@ -65,21 +71,21 @@ const Navbar = () => {
         <NavButton
           title="Cart"
           customFunc={() => handleClick("cart")}
-          color="blue"
+          color={theme.currentColor}
           icon={<FiShoppingCart />}
         />
         <NavButton
           title="Chat"
           dotColor="#03c9d7"
           customFunc={() => handleClick("chat")}
-          color="blue"
+          color={theme.currentColor}
           icon={<BsChatLeft />}
         />
         <NavButton
           title="Notifications"
           dotColor="#03c9d7"
           customFunc={() => handleClick("notification")}
-          color="blue"
+          color={theme.currentColor}
           icon={<RiNotification3Line />}
         />
         <TooltipComponent content="Profile" position="BottomCenter">
@@ -90,7 +96,10 @@ const Navbar = () => {
             <img src={avatar} className="w-8 h-8 rounded-full" alt="avatar" />
             <p>
               <span className="text-gray-400 text-14">Hi,</span>
-              <span className="text-gray-400 font-bold ml-1 text-14">
+              <span
+                className="font-bold ml-1 text-14"
+                style={{ color: theme.currentColor }}
+              >
                 Username
               </span>
             </p>

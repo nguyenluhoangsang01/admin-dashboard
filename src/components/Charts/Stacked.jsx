@@ -1,14 +1,14 @@
-import React from "react";
 import {
+  Category,
   ChartComponent,
-  SeriesCollectionDirective,
-  SeriesDirective,
   Inject,
   Legend,
-  Category,
+  SeriesCollectionDirective,
+  SeriesDirective,
   StackingColumnSeries,
   Tooltip,
 } from "@syncfusion/ej2-react-charts";
+import React from "react";
 import {
   stackedCustomSeries,
   stackedPrimaryXAxis,

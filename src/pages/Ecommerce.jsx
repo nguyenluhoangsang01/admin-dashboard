@@ -4,9 +4,12 @@ import Button from "../components/Button";
 import SparkLine from "../components/Charts/SparkLine";
 import Stacked from "../components/Charts/Stacked";
 import Footer from "../components/Footer";
+import { useStateContext } from "../contexts/ContextProvider";
 import { earningData, SparklineAreaData } from "../data/dummy";
 
 const Ecommerce = () => {
+  const { theme } = useStateContext();
+
   return (
     <div className="mt-24">
       {/* Earnings */}
@@ -21,7 +24,7 @@ const Ecommerce = () => {
           <div className="mt-6">
             <Button
               color="white"
-              bgColor="blue"
+              bgColor={theme.currentColor}
               text="Download"
               borderRadius="10px"
               size="md"
@@ -94,7 +97,10 @@ const Ecommerce = () => {
               <div>
                 <p>
                   <span className="text-3xl font-semibold">$93,438</span>
-                  <span className="p-1.5 hover:drop-shadow-xl cursor-pointer rounded-full text-white bg-green-400 ml-3 text-xs">
+                  <span
+                    className="p-1.5 hover:drop-shadow-xl cursor-pointer rounded-full text-white ml-3 text-xs"
+                    style={{ backgroundColor: theme.currentColor }}
+                  >
                     23%
                   </span>
                 </p>
@@ -112,8 +118,8 @@ const Ecommerce = () => {
                 <SparkLine
                   id="line-sparkline"
                   type="Line"
-                  color="blue"
-                  currentColor="blue"
+                  color={theme.currentColor}
+                  currentColor={theme.currentColor}
                   width="250px"
                   height="80px"
                   data={SparklineAreaData}
@@ -123,7 +129,7 @@ const Ecommerce = () => {
               <div className="mt-10">
                 <Button
                   color="white"
-                  bgColor="blue"
+                  bgColor={theme.currentColor}
                   text="download report"
                   borderRadius="10px"
                   size="md"

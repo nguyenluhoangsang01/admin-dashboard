@@ -7,11 +7,11 @@ import { useStateContext } from "../contexts/ContextProvider";
 import { links } from "../data/dummy";
 
 const Sidebar = () => {
-  const { activeMenu, setActiveMenu, screenSize } = useStateContext();
+  const { activeMenu, setActiveMenu, screenSize, theme } = useStateContext();
 
   const firstLinkNameDefault = "ecommerce";
 
-  const activeLink = `flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-white text-md m-2 bg-blue-700`;
+  const activeLink = `flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-white text-md m-2`;
   const normalLink = `flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-md text-gray-700 dark:text-gray-200 dark:hover:text-black hover:bg-light-gray m-2`;
 
   const handleCancel = () => {
@@ -61,10 +61,20 @@ const Sidebar = () => {
                     ? activeLink
                     : normalLink
                 }
+                style={({ isActive }) => ({
+                  backgroundColor:
+                    isActive ||
+                    (window.location.pathname === "/" &&
+                      link.name === firstLinkNameDefault)
+                      ? theme.currentColor
+                      : "transparent",
+                })}
                 onClick={handleCloseSidebar}
               >
                 {link.icon}
-                <span className="capitalize">{link.name}</span>
+                <span className="capitalize">
+                  {link.name.replace("-", " ")}
+                </span>
               </NavLink>
             ))}
           </div>
