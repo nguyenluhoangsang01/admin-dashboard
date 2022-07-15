@@ -55,7 +55,8 @@
 }
 
 .e-grid .e-headercelldiv {
-  margin: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
   height: 42px !important;
   line-height: 42px !important;
 }
