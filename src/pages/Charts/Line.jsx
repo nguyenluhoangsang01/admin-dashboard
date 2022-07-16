@@ -4,7 +4,7 @@ import HeaderFooterPage from "../../layout/pages";
 
 const Line = () => {
   return (
-    <HeaderFooterPage category="chart" title="Inflation	Rate">
+    <HeaderFooterPage category="chart" title="line" subtitle="Inflation Rate">
       <LineChart />
     </HeaderFooterPage>
   );

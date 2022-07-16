@@ -29,6 +29,7 @@ const LineChart = () => {
       chartArea={{ border: { width: 0 } }}
       tooltip={{ enable: true }}
       background={theme.currentMode === "dark" ? "#33373E" : "#fff"}
+      legendSettings={{ background: "white" }}
     >
       <Inject services={[LineSeries, DateTime, Legend, Tooltip]} />
       <SeriesCollectionDirective>

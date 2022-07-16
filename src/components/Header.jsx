@@ -1,7 +1,7 @@
 import React from "react";
 import { useStateContext } from "../contexts/ContextProvider";
 
-const Header = ({ category, title }) => {
+const Header = ({ category, title, subtitle }) => {
   const { theme } = useStateContext();
 
   return (
@@ -14,6 +14,9 @@ const Header = ({ category, title }) => {
         }}
       >
         {title}
+      </p>
+      <p className="text-center dark:text-gray-200 text-xl mb-2 mt-3">
+        {subtitle}
       </p>
     </div>
   );
