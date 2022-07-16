@@ -10,13 +10,15 @@ import {
 } from "@syncfusion/ej2-react-charts";
 import React from "react";
 
-const PieChart = ({ id, legendSettings, data, xName, yName, dataLabel }) => {
+const PieChart = ({ id, legendSettings, data, width, height, name }) => {
   return (
     <AccumulationChartComponent
       id={id}
       legendSettings={legendSettings}
       tooltip={{ enable: true }}
       enableSmartLabels={true}
+      width={width}
+      height={height}
     >
       <Inject
         services={[
@@ -29,8 +31,8 @@ const PieChart = ({ id, legendSettings, data, xName, yName, dataLabel }) => {
       <AccumulationSeriesCollectionDirective>
         <AccumulationSeriesDirective
           dataSource={data}
-          xName={xName}
-          yName={yName}
+          xName="x"
+          yName="y"
           innerRadius="40%"
           startAngle={0}
           endAngle={360}
@@ -38,7 +40,16 @@ const PieChart = ({ id, legendSettings, data, xName, yName, dataLabel }) => {
           explode={true}
           explodeOffset="10%"
           explodeIndex={3}
-          dataLabel={dataLabel}
+          dataLabel={{
+            visible: true,
+            name: "text",
+            position: "Inside",
+            font: {
+              fontWeight: "600",
+              color: "#ffffff",
+            },
+          }}
+          name={name}
         ></AccumulationSeriesDirective>
       </AccumulationSeriesCollectionDirective>
     </AccumulationChartComponent>

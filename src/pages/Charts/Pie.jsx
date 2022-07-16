@@ -19,17 +19,6 @@ const Pie = () => {
           position: "Top",
         }}
         data={pieChartData}
-        xName="x"
-        yName="y"
-        dataLabel={{
-          visible: true,
-          name: "text",
-          position: "Inside",
-          font: {
-            fontWeight: "600",
-            color: "#ffffff",
-          },
-        }}
       />
     </HeaderFooterPage>
   );
