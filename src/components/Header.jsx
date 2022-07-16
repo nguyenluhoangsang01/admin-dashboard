@@ -15,7 +15,7 @@ const Header = ({ category, title, subtitle }) => {
       >
         {title}
       </p>
-      <p className="text-center dark:text-gray-200 text-xl mb-2 mt-3">
+      <p className="text-center dark:text-gray-200 text-xl mb-2 mt-3 capitalize">
         {subtitle}
       </p>
     </div>
