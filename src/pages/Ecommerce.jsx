@@ -1,11 +1,11 @@
 import React from "react";
-import { GoPrimitiveDot } from "react-icons/go";
 import Button from "../components/Button";
 import SparkLine from "../components/Charts/SparkLine";
 import StackedChart from "../components/Charts/StackedChart";
 import Footer from "../components/Footer";
 import { useStateContext } from "../contexts/ContextProvider";
 import { earningData, SparklineAreaData } from "../data/dummy";
+import { BsCurrencyDollar } from "react-icons/bs";
 
 const Ecommerce = () => {
   const { theme } = useStateContext();
@@ -19,6 +19,12 @@ const Ecommerce = () => {
             <div>
               <p className="font-bold text-gray-400">Earnings</p>
               <p className="text-2xl">$63,448.78</p>
+            </div>
+            <div
+              className="p-4 opacity-0.9 rounded-full text-2xl text-white hover:drop-shadow-xl"
+              style={{ backgroundColor: theme.currentColor }}
+            >
+              <BsCurrencyDollar />
             </div>
           </div>
           <div className="mt-6">
@@ -74,21 +80,6 @@ const Ecommerce = () => {
         <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-4 rounded-2xl md:w-780">
           <div className="flex justify-between">
             <p className="font-semibold text-xl">Revenue Updates</p>
-            {/* Legend */}
-            <div className="flex items-center gap-4">
-              <p className="flex items-center gap-2 text-gray-600 hover:drop-shadow-xl">
-                <span>
-                  <GoPrimitiveDot />
-                </span>
-                <span>Expense</span>
-              </p>
-              <p className="flex items-center gap-2 text-green-400 hover:drop-shadow-xl">
-                <span>
-                  <GoPrimitiveDot />
-                </span>
-                <span>Budget</span>
-              </p>
-            </div>
           </div>
 
           <div className="mt-10 flex gap-10 flex-gap justify-center">
@@ -117,9 +108,6 @@ const Ecommerce = () => {
               <div className="mt-5">
                 <SparkLine
                   id="line-sparkline"
-                  type="Line"
-                  color={theme.currentColor}
-                  currentColor={theme.currentColor}
                   width="250px"
                   height="80px"
                   data={SparklineAreaData}

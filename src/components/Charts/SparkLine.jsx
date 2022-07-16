@@ -5,14 +5,17 @@ import {
   SparklineTooltip,
 } from "@syncfusion/ej2-react-charts";
 import React from "react";
+import { useStateContext } from "../../contexts/ContextProvider";
 
-const SparkLine = ({ id, type, color, currentColor, width, height, data }) => {
+const SparkLine = ({ id, type, width, height, data }) => {
+  const { theme } = useStateContext();
+
   return (
     <SparklineComponent
       id={id}
-      type={type}
-      fill={color}
-      border={{ color: currentColor, width: 2 }}
+      type="Line"
+      fill={theme.currentColor}
+      border={{ color: theme.currentColor, width: 2 }}
       width={width}
       height={height}
       lineWidth={1}
