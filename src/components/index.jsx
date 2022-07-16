@@ -1,7 +1,7 @@
 export { default as Button } from "./Button";
 export { default as Cart } from "./Cart";
 export { default as LineChart } from "./Charts/LineChart";
-export { default as Pie } from "./Charts/Pie";
+export { default as PieChart } from "./Charts/PieChart";
 export { default as SparkLine } from "./Charts/SparkLine";
 export { default as StackedChart } from "./Charts/StackedChart";
 export { default as ChartsHeader } from "./ChartsHeader";
