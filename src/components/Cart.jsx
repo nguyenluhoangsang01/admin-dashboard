@@ -17,7 +17,12 @@ const Cart = () => {
 
           <button
             type="button"
-            onClick={() => setIsClicked(false)}
+            onClick={(prevIsClicked) =>
+              setIsClicked({
+                ...prevIsClicked,
+                cart: false,
+              })
+            }
             style={{ color: theme.currentColor }}
             className="relative text-2xl rounded-full p-3 hover:bg-light-gray ml-5"
           >
