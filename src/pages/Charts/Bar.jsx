@@ -48,7 +48,7 @@ const Bar = () => {
             <SeriesDirective key={index} {...item} />
           ))}
         </SeriesCollectionDirective>
-      </ChartComponent>{" "}
+      </ChartComponent>
     </HeaderFooterPage>
   );
 };

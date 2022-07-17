@@ -31,7 +31,7 @@ const Customers = () => {
           ))}
         </ColumnsDirective>
         <Inject services={[Page, Selection, Toolbar, Edit, Sort, Filter]} />
-      </GridComponent>{" "}
+      </GridComponent>
     </HeaderFooterPage>
   );
 };

@@ -43,7 +43,7 @@ const Area = () => {
             <SeriesDirective key={index} {...item} />
           ))}
         </SeriesCollectionDirective>
-      </ChartComponent>{" "}
+      </ChartComponent>
     </HeaderFooterPage>
   );
 };

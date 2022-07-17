@@ -42,7 +42,7 @@ const Orders = () => {
             Edit,
           ]}
         />
-      </GridComponent>{" "}
+      </GridComponent>
     </HeaderFooterPage>
   );
 };

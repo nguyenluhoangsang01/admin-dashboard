@@ -44,7 +44,7 @@ const Notification = () => {
               />
               <span className="absolute inline-flex rounded-full h-2 w-2 right-0 -top-1"></span>
             </div>
-            <div className="">
+            <div>
               <p className="font-semibold dark:text-gray-200 ">
                 {item.message}
               </p>
