@@ -22,6 +22,7 @@ export const ContextProvider = ({ children }) => {
     JSON.parse(localStorage.getItem("theme")) || initialTheme
   );
   const [themeSettings, setThemeSettings] = useState(false);
+  const [searchBar, setSearchBar] = useState(true);
 
   const setColor = (currentColor) => {
     setTheme((prevTheme) => ({
@@ -80,6 +81,8 @@ export const ContextProvider = ({ children }) => {
         setMode,
         themeSettings,
         setThemeSettings,
+        searchBar,
+        setSearchBar,
       }}
     >
       {children}

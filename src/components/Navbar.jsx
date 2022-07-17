@@ -1,7 +1,7 @@
 import { TooltipComponent } from "@syncfusion/ej2-react-popups";
 import React, { useEffect } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
-import { BsChatLeft } from "react-icons/bs";
+import { BsChatLeft, BsSearch } from "react-icons/bs";
 import { FiShoppingCart } from "react-icons/fi";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { RiNotification3Line } from "react-icons/ri";
@@ -11,6 +11,7 @@ import avatar from "../data/avatar.jpg";
 import Cart from "./Cart";
 import Chat from "./Chat";
 import Notification from "./Notification";
+import SearchBar from "./SearchBar";
 import UserProfile from "./UserProfile";
 
 const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
@@ -38,6 +39,8 @@ const Navbar = () => {
     screenSize,
     setScreenSize,
     theme,
+    searchBar,
+    setSearchBar,
   } = useStateContext();
 
   useEffect(() => {
@@ -60,12 +63,20 @@ const Navbar = () => {
 
   return (
     <div className="flex justify-between p-2 md:mx-6 relative">
-      <NavButton
-        title="Menu"
-        customFunc={() => setActiveMenu((prevActiveMenu) => !prevActiveMenu)}
-        color={theme.currentColor}
-        icon={<AiOutlineMenu />}
-      />
+      <div className="flex">
+        <NavButton
+          title="Menu"
+          customFunc={() => setActiveMenu((prevActiveMenu) => !prevActiveMenu)}
+          color={theme.currentColor}
+          icon={<AiOutlineMenu />}
+        />
+        <NavButton
+          title="Search"
+          customFunc={() => setSearchBar((prevSearchBar) => !prevSearchBar)}
+          color={theme.currentColor}
+          icon={<BsSearch />}
+        />
+      </div>
 
       <div className="flex">
         <NavButton
@@ -112,6 +123,8 @@ const Navbar = () => {
         {isClicked.notification && <Notification />}
         {isClicked.userProfile && <UserProfile />}
       </div>
+
+      {searchBar && <SearchBar />}
     </div>
   );
 };
