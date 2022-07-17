@@ -111,7 +111,7 @@ const Navbar = () => {
                 className="font-bold ml-1 text-14"
                 style={{ color: theme.currentColor }}
               >
-                Username
+                Michael Roberts
               </span>
             </p>
             <MdKeyboardArrowDown className="text-gray-400 text-14" />
