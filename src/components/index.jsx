@@ -4,7 +4,6 @@ export { default as LineChart } from "./Charts/LineChart";
 export { default as PieChart } from "./Charts/PieChart";
 export { default as SparkLine } from "./Charts/SparkLine";
 export { default as StackedChart } from "./Charts/StackedChart";
-export { default as ChartsHeader } from "./ChartsHeader";
 export { default as Chat } from "./Chat";
 export { default as Footer } from "./Footer";
 export { default as Header } from "./Header";
