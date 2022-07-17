@@ -354,6 +354,7 @@ const Ecommerce = () => {
                   <p
                     className="cursor-pointer hover:drop-shadow-xl text-white py-0.5 px-3 rounded-lg text-xs"
                     style={{ backgroundColor: item.color }}
+                    key={index}
                   >
                     {item.name}
                   </p>
